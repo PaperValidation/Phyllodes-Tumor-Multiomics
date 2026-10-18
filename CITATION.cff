@@ -8,8 +8,8 @@ abstract: >-
   methylation-expression concordance, and reproducible druggable-target selection.
 type: software
 license: MIT
-repository-code: "https://github.com/OWNER/phyllodes-tumor-multiomics"
-url: "https://github.com/OWNER/phyllodes-tumor-multiomics"
+repository-code: "https://github.com/PaperValidation/Phyllodes-Tumor-Multiomics"
+url: "https://github.com/PaperValidation/Phyllodes-Tumor-Multiomics"
 keywords:
   - phyllodes tumor
   - breast pathology
