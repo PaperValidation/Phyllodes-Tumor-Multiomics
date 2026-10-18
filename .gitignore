@@ -1,0 +1,100 @@
+# ---------------------------------------------------------------
+# Data and local configuration (never committed)
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Data roots if the pipeline is ever run inside the repository
+data/
+results/figures/
+raw/
+*.rds
+*.RData
+*.soft
+*.soft.gz
+
+# ---------------------------------------------------------------
+# Large intermediate result tables
+# Probe-level DMP tables exceed 460 MB in total and are regenerated
+# by the pipeline from public GEO inputs. Keep only the summary tables.
+# ---------------------------------------------------------------
+results/tables/gse231574_DMP_*.csv
+results/tables/gse179458_DMP_*.csv
+results/tables/gse235267_DE_*.csv
+!results/tables/gse231574_DMR_Mal_vs_Ben.csv
+
+# DEPRECATED / MISLEADING — do not publish.
+# The legacy "Trend" contrast was written as
+#     (borderline - benign) + (malignant - borderline)
+# which is algebraically identical to malignant - benign, so these files are
+# byte-identical duplicates of the pairwise tables and carry no independent
+# evidence. The genuine ordinal model lives in
+#     results/tables/gse78071_DE_ordinal_trend*.csv
+# Publishing the duplicates invites exactly the misinterpretation we removed
+# from the manuscript.
+results/tables/*_Trend.csv
+
+# ---------------------------------------------------------------
+# R artefacts
+# ---------------------------------------------------------------
+Rplots.pdf
+.Rhistory
+.Rapp.history
+.Rproj.user/
+*.Rproj
+*.knit.md
+
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ---------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------
+# Tooling
+# ---------------------------------------------------------------
+.workbuddy/
+.codegraph/
+
+# ---------------------------------------------------------------
+# INTENTIONALLY NOT PUBLISHED — unpublished manuscript material
+#
+# The manuscript and its submission package are excluded so that this
+# repository does not constitute pre-publication of the full text. Only the
+# analysis code and the result tables that support the Data Availability
+# statement are published here.
+#
+# Excluded: manuscript_v1.md, submission/*, the outline, the internal review
+# committee records and the reviewer-assessment notes.
+# Published: docs/manuscript/review/audit_*.md and numbers_ledger_*.md, which
+# are methodological provenance documents (what number comes from which file),
+# not manuscript text.
+# ---------------------------------------------------------------
+docs/manuscript/manuscript_v1.md
+docs/manuscript/00_outline.md
+docs/manuscript/deep_research_audit.md
+docs/manuscript/nature_reviewer_assessment.md
+docs/manuscript/review_committee_*.md
+docs/manuscript/review/final_review_*.md
+docs/manuscript/review/nature_reviewer_verification_*.md
+docs/manuscript/review/HANDOVER_*.md
+docs/manuscript/submission/
+docs/deep-research-report.md
+
+# Deprecated one-shot manuscript patch scripts (contain manuscript text
+# fragments and must never be re-run; see scripts/python/_archive/).
+scripts/python/_archive/

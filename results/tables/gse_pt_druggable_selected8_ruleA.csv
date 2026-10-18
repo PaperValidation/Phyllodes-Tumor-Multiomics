@@ -1,0 +1,9 @@
+gene,druggable,n_drugs,drugs,dgidb_categories,pt_pathway,mean_expr_PT,mean_expr_FA,pt_rel,logFC_PT_vs_FA,adjP_PT_vs_FA,logFC_Mal_vs_Ben,adjP_Mal_vs_Ben,log2FC_expr_PT_vs_FA,DE_sig_PT_vs_FA,mechanism_validated,n_agents_approved,n_agents_investigational,agent_status
+TGFB2,True,2,galunisertib;vactosertib(investigational),TGFb_ECM,TGFb_ECM,3638.258625,1485.7773225,True,1.59168,0.0174445,0.558695,0.938782,1.59168,TRUE,TRUE,0,2,investigational-only
+PDGFD,True,1,PDGFR inhibitors(context),RTK_PDGFR_FGFR,Stromal_other,2428.16075,3886.45245833333,True,-0.924422,0.0191765,-0.867372,0.784591,-0.924422,TRUE,TRUE,0,0,no-named-agent
+TWIST1,True,1,investigational(EMT),Stromal_other,Stromal_other,2390.10952083333,1621.09496666667,True,0.794695,0.0250949,1.23765,0.188613,0.794695,TRUE,TRUE,0,0,no-named-agent
+CDKN2A,True,1,CDK4/6 inhibitors(context),CellCycle_CDK,CellCycle_CDK,2575.0148925,1933.79496583333,True,1.27885,0.0385372,1.81585,0.387092,1.27885,TRUE,TRUE,0,0,no-named-agent
+CCNE1,True,1,CDK4/6 inhibitors(investigational),CellCycle_CDK,CellCycle_CDK,1883.52420416667,940.389558333333,True,1.05086,0.0387108,0.985373,0.855687,1.05086,TRUE,TRUE,0,0,no-named-agent
+KIT,True,3,imatinib;sunitinib;avapritinib,RTK_PDGFR_FGFR,RTK_PDGFR_FGFR,NA,NA,True,-0.875552,0.0420714,-1.03282,0.645488,-0.875552,TRUE,FALSE,3,0,has-approved
+TGFBR2,True,1,galunisertib(investigational),TGFb_ECM,TGFb_ECM,NA,NA,True,-0.718952,0.0428576,0.893131,0.936953,-0.718952,TRUE,FALSE,0,1,investigational-only
+PDGFA,True,2,imatinib;nintedanib,RTK_PDGFR_FGFR,RTK_PDGFR_FGFR,NA,NA,True,-1.04863,0.0493007,-0.465511,0.938782,-1.04863,TRUE,FALSE,2,0,has-approved

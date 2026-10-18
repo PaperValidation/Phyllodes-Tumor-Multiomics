@@ -1,0 +1,29 @@
+=====================================================================
+ Druggable target selection — REPRODUCIBLE RULE (option A)
+   rule: adjP_PT_vs_FA < 0.05  AND  pt_rel  AND  n_drugs > 0
+=====================================================================
+source candidates : 851
+  with >=1 curated agent : 53
+  with PT-mechanism axis : 59
+  DE-significant PTvsFA  : 674
+SELECTED (all 3)         : 8
+
+gene      axis                 log2FC       adjP n_drug  status              drugs
+------------------------------------------------------------------------------------------------------------
+TGFB2     TGFb_ECM              1.592     0.0174      2  investigational-onlygalunisertib;vactosertib(investigational
+PDGFD     Stromal_other        -0.924     0.0192      1  no-named-agent      PDGFR inhibitors(context)
+TWIST1    Stromal_other         0.795     0.0251      1  no-named-agent      investigational(EMT)
+CDKN2A    CellCycle_CDK         1.279     0.0385      1  no-named-agent      CDK4/6 inhibitors(context)
+CCNE1     CellCycle_CDK         1.051     0.0387      1  no-named-agent      CDK4/6 inhibitors(investigational)
+KIT       RTK_PDGFR_FGFR       -0.876     0.0421      3  has-approved        imatinib;sunitinib;avapritinib
+TGFBR2    TGFb_ECM             -0.719     0.0429      1  investigational-onlygalunisertib(investigational)
+PDGFA     RTK_PDGFR_FGFR       -1.049     0.0493      2  has-approved        imatinib;nintedanib
+
+targets with >=1 approved agent : 2/8
+targets with only investigational/context agents : 6/8
+
+CAVEAT for the manuscript:
+  All DE support derives from the PT-vs-FA (entity-level) contrast.
+  Targets also significant in Mal-vs-Ben (grade contrast): 0/8
+
+WROTE: E:\Medical Data\Dermatology\Phyllodes tumor\results\tables\gse_pt_druggable_selected8_ruleA.csv

@@ -1,0 +1,76 @@
+=====================================================================
+ TRUE ORDINAL TREND MODELS   ran: 2026-10-18 18:47:42 
+ severity: Benign=1 / Borderline=2 / Malignant=3 (continuous covariate)
+ limma lmFit + eBayes + BH ; logFC = slope per grade step
+=====================================================================
+
+GSE78071: 29377 48 samples | diagnosis:
+diag
+    Benign phyllodes tumor Borderline phyllodes tumor 
+                        16                          4 
+      Complex fibroadenoma  Malignant phyllodes tumor 
+                         5                          4 
+       Simple fibroadenoma 
+                        19 
+
+group sizes:
+grp
+ FA Ben Bor Mal 
+ 24  16   4   4 
+[verify] PT_vs_FA  = 737 probes FDR<0.05 (legacy 737), min P = 7.8959e-09 (legacy 7.8959e-09)
+[verify] Mal_vs_Ben = 62 probes FDR<0.05 (legacy 62), min P = 2.6935e-10 (legacy 2.6935e-10)
+
+[A] spec model: ~severity, PT subset only, n = 24 : 1 16 / 2 4 / 3 4 
+WROTE: /mnt/e/Medical Data/Dermatology/Phyllodes tumor/results/tables/gse78071_DE_ordinal_trend.csv  rows: 29377 
+  FDR<0.05 = 1 probe(s) / 1 gene(s) | nominal p<0.05 = 1103 (0.75x expected) | p<0.001 = 42 (expected 29)
+  df.total = 25.48 | min adj.P = 0.005178 
+         probe   symbol      logFC         t      P.Value   adj.P.Val
+1 ILMN_1656979      ABO -1.2254767 -7.091333 1.762626e-07 0.005178067
+2 ILMN_1800642     RELN -1.7000583 -5.900235 3.445233e-06 0.050605312
+3 ILMN_1810996  COL24A1  1.0096184  5.052667 3.088185e-05 0.239613126
+4 ILMN_1695959 C21orf63 -0.7730067 -4.978653 3.746698e-05 0.239613126
+5 ILMN_1726448     MMP1  1.3156243  4.946203 4.078244e-05 0.239613126
+6 ILMN_1716465     RBP7 -0.8678415 -4.629566 9.335835e-05 0.332886017
+7 ILMN_1689146    GABRP -0.8208967 -4.614155 9.719900e-05 0.332886017
+8 ILMN_1749162     DIO2 -0.9019352 -4.608632 9.861364e-05 0.332886017
+
+WROTE: /mnt/e/Medical Data/Dermatology/Phyllodes tumor/results/tables/gse78071_DE_ordinal_trend_pooledvar.csv  rows: 29377 
+[B] pooled variance (df.total = 47.5, same as legacy model): FDR<0.05 = 19 probe(s) / 19 gene(s) | nominal = 1686 (1.15x) | p<0.001 = 136 (4.6x)
+          probe    symbol      logFC         t      P.Value    adj.P.Val
+1  ILMN_1656979       ABO -1.2254767 -7.807449 4.637521e-10 1.362365e-05
+2  ILMN_2249018 LOC389816 -0.9697176 -6.168921 1.441136e-07 2.116812e-03
+3  ILMN_1710903      MAPT -0.8300974 -5.768209 5.850488e-07 5.728993e-03
+4  ILMN_1680757    LRRC26 -1.2025004 -5.633692 9.341541e-07 6.133989e-03
+5  ILMN_1766264      PI16 -1.9414229 -5.574216 1.148299e-06 6.133989e-03
+6  ILMN_1695959  C21orf63 -0.7730067 -5.549085 1.252815e-06 6.133989e-03
+7  ILMN_1810996   COL24A1  1.0096184  5.171407 4.599596e-06 1.793238e-02
+8  ILMN_1716465      RBP7 -0.8678415 -5.153892 4.883380e-06 1.793238e-02
+9  ILMN_1726448      MMP1  1.3156243  5.091208 6.047985e-06 1.908054e-02
+10 ILMN_1689146     GABRP -0.8208967 -5.070268 6.495062e-06 1.908054e-02
+11 ILMN_1692342  CDC42BPG -0.9735840 -4.951238 9.728846e-06 2.598221e-02
+12 ILMN_1717710   SLC26A5 -1.6804052 -4.915264 1.098731e-05 2.689785e-02
+13 ILMN_1745623   EFCAB4A -0.6203808 -4.767072 1.809003e-05 3.978572e-02
+14 ILMN_1664176     FBLN5 -0.6113879 -4.753041 1.896041e-05 3.978572e-02
+15 ILMN_1657627   CBFA2T3 -0.6347592 -4.721900 2.104170e-05 4.093959e-02
+
+--- new ordinal models vs legacy Mal_vs_Ben (62 hits) ---
+  [A] Spearman(logFC) = 0.9247 | Pearson = 0.9426 | hits = 1 | overlap with legacy 62 = 1 | identical logFC vectors? FALSE
+  [B] Spearman(logFC) = 0.9247 | Pearson = 0.9426 | hits = 19 | overlap with legacy 62 = 19 | identical logFC vectors? FALSE
+
+  (legacy 'Trend' == Mal_vs_Ben by construction: (Bor-Ben)+(Mal-Bor) = Mal-Ben)
+
+### PART 2: GSE231574 methylation ordinal trend ###
+M matrix: 519767 33 | pheno: 33 13 
+g5
+         FA      Benign  Borderline   Malignant Metaplastic 
+          2           2           9          18           2 
+[verify] Mal_vs_Ben = 0 probes FDR<0.05 (legacy 0), min adj.P = 1.000000 (legacy 0.99999957)
+PT subset n = 29 (dropped 4 FA/Metaplastic)
+
+    Benign Borderline  Malignant 
+         2          9         18 
+WROTE: /mnt/e/Medical Data/Dermatology/Phyllodes tumor/results/tables/gse231574_DMP_ordinal_trend.csv  rows: 519767 
+[meth] FDR<0.05 = 0 | nominal p<0.05 = 23884 (0.92x expected) | p<0.001 = 579 (1.11x) | min adj.P = 0.7426 | df.total = 32.4
+  vs legacy Mal_vs_Ben: Spearman(logFC) = 0.8073 | hits_new = 0 | overlap = 0 | identical logFC? FALSE
+
+### DONE ###

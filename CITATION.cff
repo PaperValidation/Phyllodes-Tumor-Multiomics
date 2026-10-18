@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the associated manuscript."
+title: "Phyllodes tumor multi-omics re-analysis: code and summary result tables"
+abstract: >-
+  Analysis code and summary result tables for an integrative transcriptomic and
+  DNA methylomic re-analysis of phyllodes tumors, covering differential
+  expression, differential methylation, a lncRNA-mRNA co-expression network,
+  methylation-expression concordance, and reproducible druggable-target selection.
+type: software
+license: MIT
+repository-code: "https://github.com/OWNER/phyllodes-tumor-multiomics"
+url: "https://github.com/OWNER/phyllodes-tumor-multiomics"
+keywords:
+  - phyllodes tumor
+  - breast pathology
+  - DNA methylation
+  - transcriptomics
+  - lncRNA
+  - drug repositioning
+  - reproducibility
+authors:
+  - family-names: "PLACEHOLDER"
+    given-names: "PLACEHOLDER"
+    note: "Replace with the author list once finalised; must match the manuscript."
+# Update 'date-released' and the author block before archiving a release.
